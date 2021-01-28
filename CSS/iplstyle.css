@@ -1,0 +1,46 @@
+    body {
+        background-color: rgb(186, 219, 219);
+    }
+    
+    header {
+        background-color: rgb(172, 17, 164);
+        font-size: 2cm;
+        color: rgb(252, 166, 8);
+        width: 55%;
+        font-family: 'Times New Roman', Times, serif;
+    }
+    
+    .an {
+        width: 55%;
+        background-color: rgb(255, 0, 76);
+        font-size: +8;
+        color: rgb(255, 255, 255);
+    }
+    
+    .al {
+        width: 55%;
+        background-color: rgb(26, 11, 243);
+        font-size: +8;
+        color: rgb(255, 255, 255);
+    }
+    
+    .rc {
+        width: 55%;
+        background-color: rgb(231, 8, 8);
+        font-size: +8;
+        color: rgb(255, 255, 255);
+    }
+    
+    .kkr {
+        width: 55%;
+        background-color: rgb(37, 5, 63);
+        font-size: +8;
+        color: rgb(255, 255, 255);
+    }
+    
+    .csk {
+        width: 55%;
+        background-color: rgb(243, 239, 9);
+        font-size: +8;
+        color: rgb(41, 0, 189);
+    }
