@@ -1,0 +1,12 @@
+var num1 = 13;
+var num2 = 11;
+numsum = num1 + num2;
+numsub = num1 - num2;
+nummul = num1 * num2;
+numdiv = num1 / num2;
+nump = num1 % num2;
+console.log("Result is", numsum, numsub, nummul, numdiv, nump);
+console.log((2 > 5) & (3 < 5));
+console.log((2 > 5) | (3 < 5));
+var nums = 10;
+console.log(++nums);

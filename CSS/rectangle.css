@@ -1,0 +1,21 @@
+body {
+    background-color: aliceblue
+}
+
+#1st {
+    background-color: rgb(49, 173, 11);
+    height: 30%;
+    width: 20%;
+}
+
+#2st {
+    background-color: rgb(156, 187, 16);
+    height: 30%;
+    width: 20%;
+}
+
+#3st {
+    background-color: rgba(62, 28, 185, 0.281), 46, 0.267);
+    height: 30%;
+    width: 20%;
+}
