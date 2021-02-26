@@ -1,0 +1,12 @@
+.bode {
+    color: #b8b7b7;
+    background-image: url("Mir.jpg");
+    max-width: 10cm;
+    height: 10cm;
+    margin: auto;
+    box-shadow: 4px 6px 8px 6px rgba(9, 0, 19, 0.76);
+}
+
+h1 {
+    font-family: 'Times New Roman', Times, serif;
+}
