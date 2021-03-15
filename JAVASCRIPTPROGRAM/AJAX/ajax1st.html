@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title></title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="css/style.css" rel="stylesheet">
+</head>
+
+<body>
+    <h1>welcome to js</h1>
+    <button onclick="getposts()">CLICK</button>
+</body>
+<script>
+    var request = new XMLHttpRequest()
+    request.open("GET", "https://jsonplaceholder.typicode.com/posts")
+    request.send()
+
+    function getposts() {
+
+        data = request.responseText
+        console.log(data)
+        alert("task complted")
+        request.onreadystatechange = () => {
+
+            if (request.readyState == 4) {
+                if ((request.status >= 200) & (request.status < 300)) {
+                    var result = JSON.parse(request.responseText)
+                    console.log(result[0]);
+                    console.log(result[0].title);
+                } else {
+                    alert("failed")
+                }
+            }
+        }
+    }
+</script>
+
+</html>

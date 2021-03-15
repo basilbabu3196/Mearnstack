@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title></title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="css/style.css" rel="stylesheet">
+    <script>
+        function val() {
+            var num = document.querySelector("#no");
+            try {
+                if (num < 5) {
+                    throw new Error("invalid ")
+                }
+            } catch (er) {
+                alert("evidannuy kittan");
+            }
+        }
+    </script>
+</head>
+
+<body>
+    <div class="container">
+        <div class="selection">
+            enter the number bw 5 to 10
+            <input type="text" name="num" id="no">
+            <button onclick="val()">Submit</button></div>
+    </div>
+</body>
+
+
+</html>

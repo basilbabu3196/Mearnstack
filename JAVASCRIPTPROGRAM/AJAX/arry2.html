@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title></title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="css/style.css" rel="stylesheet">
+    <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+
+
+</head>
+
+<body>
+    <h1>welcome to js</h1>
+    <input type="button" value="submit all" onclick="creatPost()">
+    <table>
+        <tr>
+            <td>User Id</td>
+            <td>
+                <input type="text" id="user_id" name=""></td>
+        </tr>
+        <tr>
+            <td>Id</td>
+            <td>
+                <input type="text" id="id" name=""></td>
+        </tr>
+        <tr>
+            <td>title</td>
+            <td>
+                <input type="text" id="title" name=""></td>
+        </tr>
+        <tr>
+            <td>Body</td>
+            <td>
+                <input type="text" id="bdy" name=""></td>
+        </tr>
+    </table>
+    <table class="table">
+        <thead>
+            <tr>
+                <th scope="col">userid</th>
+                <th scope="col">id</th>
+                <th scope="col">title</th>
+                <th scope="col">body</th>
+            </tr>
+        </thead>
+        <tbody id="data"></tbody>
+
+</body>
+<script>
+    function creatPost() {
+        uid = document.getElementById("user_id").value;
+        id = document.getElementById("id").value;
+        utitle = document.getElementById("title").value;
+        ubody = document.getElementById("bdy").value;
+        data = {
+            userid: uid,
+            body: ubody,
+            id: id,
+            title: utitle
+        }
+        request.send(data)
+    }
+    var request = new XMLHttpRequest()
+    request.open("GET", "https://jsonplaceholder.typicode.com/posts/1")
+
+    function getposts() {
+        request.send()
+    }
+
+
+    data = request.responseText
+    console.log(data)
+    alert("task complted")
+    request.onreadystatechange = () => {
+
+        if (request.readyState == 4) {
+            if ((request.status >= 200) & (request.status < 300)) {
+                var result = JSON.parse(request.responseText)
+                var html_data = ""
+                html_data = html_data + "<tr><td>" + result.userId + "</td><td>" + result.id + " </td><td>" + result.title + " </td> <td>" + result.body + " </td></tr> "
+                document.querySelector("#data").innerHTML = html_data
+            } else {
+                alert("failed")
+            }
+        }
+    }
+</script>
+<button onclick="getposts()">CLICK</button>
+
+</html>

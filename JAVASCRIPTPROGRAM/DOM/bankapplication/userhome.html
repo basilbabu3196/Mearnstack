@@ -6,6 +6,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="css/style.css" rel="stylesheet">
+    <script src="bnk.js" type="text/javascript"></script>
 </head>
 
 <body>
@@ -14,8 +15,8 @@
         <h1>USER HOME</h1>ACCOUNT NO: <input type="text" name="accno" id="acno">
         <br> PASSWORD: <input type="password" name="name" id="pwd">
         <br>AMOUNT <input type="text" name="amount" id="amt">
-        <br>Deposit <input type="radio" name="deposit_withdraw" id="dw">withdraw<input type="radio" name="deposit_withdraw" id="dw"><br>
-        <input type="submit" value="Submit">&nbsp;
+        <br> <input type="button" name="deposit_withdraw" onclick="Bank.withdraw()" value="withdraw">
+        <input type="button" name="deposit_withdraw" onclick="Bank.deposite()" value="Deposit"> &nbsp;
         <input type="reset">
     </center>
 </body>
